@@ -11,7 +11,7 @@ fn main() -> Result<()>{
     println!("Hello, world!");
 
     for entry in read_dir("./")?.filter_map(|e| e.ok()) {
-        let entry: Stfing = W(&entry).try_into()?;
+        let entry: String :: From<&String> = W(&entry).try_into()?;
         println!("{entry:?}");
     }
 
